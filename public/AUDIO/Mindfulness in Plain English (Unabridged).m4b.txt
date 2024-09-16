@@ -1,0 +1,16 @@
+Start,0
+Chapter 2,1371.632463
+Chapter 3,2773
+Chapter 4,4052.206575
+Chapter 5,4626.513359
+5.1 - Goal,5235.921379
+5.2 - Practice,5293.363584
+5.3 - What to do when mind wanders away,5607.534221
+Chapter 6,6603.41753
+Chapter 7,7086.213317
+Chapter 8,8358.752556
+Chapter 9,9253.359752
+Chapter 10,10315.036831
+Chapter 11,12351.18618
+Chapter 12,12947.006007
+Chapter 13,14920.777351

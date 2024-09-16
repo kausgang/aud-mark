@@ -10,9 +10,14 @@ function PlaybackControl(props) {
 
     if (playing) {
       setTimeout(() => {
-        props.seek_progressbar(Math.round(sound.seek()));
+        // props.seek_progressbar(Math.round(sound.seek()));
+        props.seek_progressbar(sound.seek());
       }, 1000);
     }
+
+    // if (playing) {
+    //   props.seek_progressbar(Math.round(sound.seek()));
+    // }
 
     // // BOOKARK SEEK HAS BEEN CLICKED
     // if (props.audio_value !== null) {
@@ -35,14 +40,20 @@ function PlaybackControl(props) {
       .getElementById("play_pause")
       .getAttribute("class");
 
-    if (button_class === "playing") {
+    if (button_class === "playing btn btn-primary btn-lg mr-3") {
       //now i can only pause it
       // CLEAR INTERVAL
       // clearInterval(intervalID)
       // PAUSE THE MUSIC
       sound.pause();
+
+      // Change Icon
+      document.getElementById("play_icon").innerHTML = "play_circle";
+
       //CHANGE CLASSNAME
-      document.getElementById("play_pause").setAttribute("class", "paused");
+      document
+        .getElementById("play_pause")
+        .setAttribute("class", "paused btn btn-primary btn-lg mr-3");
     } else {
       // GET CURRENT SEEK TIME FROM PARENT
       setTimestamp(props.current_seek);
@@ -51,8 +62,14 @@ function PlaybackControl(props) {
 
       // PLAY MUSIC
       sound.play();
+
+      // Change Icon
+      document.getElementById("play_icon").innerHTML = "pause";
+
       //CHANGE CLASSNAME TO RERENDER COMPONENT
-      document.getElementById("play_pause").setAttribute("class", "playing");
+      document
+        .getElementById("play_pause")
+        .setAttribute("class", "playing btn btn-primary btn-lg mr-3");
     }
 
     // CHANGE BUTTON TEXT
@@ -119,24 +136,219 @@ function PlaybackControl(props) {
     props.seek_progressbar(timestamp + 60);
   };
 
+  const _1x_speed = () => {
+    document
+      .getElementById("_1x_speed")
+      .setAttribute("class", "btn btn-warning active");
+
+    document
+      .getElementById("_1_25x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    document
+      .getElementById("_1_5x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    document
+      .getElementById("_1_75x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    document
+      .getElementById("_2x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    sound.rate(1);
+  };
+  const _1_25x_speed = () => {
+    document
+      .getElementById("_1x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    document
+      .getElementById("_1_25x_speed")
+      .setAttribute("class", "btn btn-warning active");
+
+    document
+      .getElementById("_1_5x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    document
+      .getElementById("_1_75x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    document
+      .getElementById("_2x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    sound.rate(1.25);
+  };
+  const _1_5x_speed = () => {
+    document
+      .getElementById("_1x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    document
+      .getElementById("_1_25x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    document
+      .getElementById("_1_5x_speed")
+      .setAttribute("class", "btn btn-warning active");
+
+    document
+      .getElementById("_1_75x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    document
+      .getElementById("_2x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    sound.rate(1.5);
+  };
+  const _1_75x_speed = () => {
+    document
+      .getElementById("_1x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    document
+      .getElementById("_1_25x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    document
+      .getElementById("_1_5x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    document
+      .getElementById("_1_75x_speed")
+      .setAttribute("class", "btn btn-warning active");
+
+    document
+      .getElementById("_2x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    sound.rate(1.75);
+  };
+  // 2X speed
+  const _2x_speed = () => {
+    document
+      .getElementById("_1x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    document
+      .getElementById("_1_25x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    document
+      .getElementById("_1_5x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    document
+      .getElementById("_1_75x_speed")
+      .setAttribute("class", "btn btn-warning");
+
+    document
+      .getElementById("_2x_speed")
+      .setAttribute("class", "btn btn-warning active");
+
+    sound.rate(2);
+  };
+
   return (
     <div>
-      {/* <br></br> */}
-      {/* <p>{timestamp}</p> */}
-      {/* <br></br> */}
-
-      <button onClick={back60sec}>Back 1min</button>
-      <button onClick={back10sec}>Back 10sec</button>
-      <button onClick={back1sec}>Back 1sec</button>
-
-      <button id="play_pause" className="paused" onClick={play}>
-        Click to {playing ? "Pause" : "Play"}
+      <div className="btn-group" role="group" aria-label="Speed Control">
+        {/* speed control */}
+        <button
+          id="_1x_speed"
+          // className="paused btn btn-warning"
+          className="btn btn-warning active"
+          onClick={_1x_speed}
+        >
+          {/* {" "} */}
+          1x
+        </button>
+        <button
+          id="_1_25x_speed"
+          className="btn btn-warning"
+          onClick={_1_25x_speed}
+        >
+          {" "}
+          1.25x
+        </button>
+        <button
+          id="_1_5x_speed"
+          className="btn btn-warning"
+          onClick={_1_5x_speed}
+        >
+          {" "}
+          1.5x
+        </button>
+        <button
+          id="_1_75x_speed"
+          className="btn btn-warning"
+          onClick={_1_75x_speed}
+        >
+          {" "}
+          1.75x
+        </button>
+        <button id="_2x_speed" className="btn btn-warning" onClick={_2x_speed}>
+          {" "}
+          2x
+        </button>
+      </div>{" "}
+      <div className="btn-group" role="group" aria-label="Track Seek Left">
+        {/* back 60 sec */}
+        <button type="button" className="btn btn-secondary" onClick={back60sec}>
+          <span className="material-symbols-rounded">arrow_back</span>
+        </button>
+        {/* back 10 sec */}
+        <button type="button" className="btn btn-secondary" onClick={back10sec}>
+          <span className="material-symbols-rounded">
+            keyboard_double_arrow_left
+          </span>
+        </button>
+        {/* back 1 sec */}
+        <button type="button" className="btn btn-secondary" onClick={back1sec}>
+          <span className="material-symbols-rounded">keyboard_arrow_left</span>
+        </button>
+      </div>
+      <div className="btn-group" role="group" aria-label="Track Seek Right">
+        {/* forward 1 sec */}
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={forward1sec}
+        >
+          <span className="material-symbols-rounded">keyboard_arrow_right</span>
+        </button>
+        {/* forward 10 sec */}
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={forward10sec}
+        >
+          <span className="material-symbols-rounded">
+            keyboard_double_arrow_right
+          </span>
+        </button>
+        {/* forward 60 sec */}
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={forward60sec}
+        >
+          <span className="material-symbols-rounded">arrow_right_alt</span>
+        </button>
+      </div>{" "}
+      <button
+        id="play_pause"
+        className="paused btn btn-primary btn-lg mr-3"
+        onClick={play}
+      >
+        <span id="play_icon" className="material-symbols-rounded">
+          play_circle
+        </span>
+        {"  "} Play/Pause
       </button>
-      {/* <button onClick={pause}>Click to pause</button> */}
-      {/* <button onClick={stop}>Click to stop</button> */}
-      <button onClick={forward1sec}>Forward 1sec</button>
-      <button onClick={forward10sec}>Forward 10sec</button>
-      <button onClick={forward60sec}>Forward 1min</button>
     </div>
   );
 }

@@ -1,0 +1,46 @@
+Start,0
+Intro - MY STORY,40.546332
+1. The Surprising Power of Atomic Habits,1053.576501
+Chapter Summary,2487.39259
+2. How Your Habits Shape Your Identity (and Vice Versa),2544.923552
+Chapter Summary,3689.221801
+3. How to Build Better Habits in 4 Simple Steps,3733.632509
+Chapter Summary,4824.383701
+4. The Man Who Didn’t Look Right,4863.424621
+Chapter Summary,5621.902812
+5. The Best Way to Start a New Habit,5656.890459
+Chapter Summary,6540.891842
+6. Motivation Is Overrated; Environment Often Matters More,6578.788199
+Chapter Summary,7475.348763
+7. The Secret to Self-Control,7508.025819
+Chapter Summary,7958.36284
+8. How to Make a Habit Irresistible,8049.235651
+Chapter Summary,9064.048497
+9. The Role of Family and Friends in Shaping Your Habits,9102.080027
+Chapter Summary,9982.771555
+10. How to Find and Fix the Causes of Your Bad Habits,10035.692801
+Chapter Summary,10874.810042
+11. Walk Slowly, but Never Backward,11004.394366
+Chapter Summary,11518.012785
+12. The Law of Least Effort,11548.528205
+Chapter Summary,12444.386903
+13. How to Stop Procrastinating by Using the Two-Minute Rule,12476.674333
+Chapter Summary,13164.335733
+14. How to Make Good Habits Inevitable and Bad Habits Impossible,13203.342311
+Chapter Summary,13898.872811
+15. The Cardinal Rule of Behavior Change,14014.129558
+Chapter Summary,15077.958151
+16. How to Stick with Good Habits Every Day,15124.082554
+Chapter Summary,16042.491764
+17. How an Accountability Partner Can Change Everything,16080.615204
+Chapter Summary,16672.51256
+18. The Truth About Talent (When Genes Matter and When They Don’t),16784.064952
+Chapter Summary,17920.491219
+19. The Goldilocks Rule: How to Stay Motivated in Life and Work,17963.403788
+Chapter Summary,18655.715847
+20. The Downside of Creating Good Habits,18688.073313
+Chapter Summary,19686.707194
+Conclusion: The Secret to Results That Last,19715.622858
+Appendix - What Should You Read Next?,19967.384193
+HOW TO *,20014.209682
+Acknowledgement,20083.054014
